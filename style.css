@@ -12,7 +12,11 @@
 .div_speed{
     float:left;
 }
-#s1{
+.div_speed_img{
+    width:200px;
+    border-radius: 100px;
+}
+#speed{
     font-size:23px;
     margin:15px;
     filter:contrast(150%);
@@ -20,19 +24,17 @@
 .div_vol{
     float:right;
 }
-.div_img{
+.div_vol_img{
     width:200px;
     border-radius: 100px;
-    height:200px;
 }
-#s2{
+#vol{
     font-size:23px;
     margin:15px;
     filter:contrast(150%);
 }
 body{
     font-family: 'Zen Kurenaido', sans-serif;
-    background-image:url("https://wallpapercave.com/wp/4ZCPiFA.jpg");
 }
 sm {
     font-family: 'Space Mono', monospace;
