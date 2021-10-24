@@ -12,11 +12,7 @@
 .div_speed{
     float:left;
 }
-.div_speed_img{
-    width:200px;
-    border-radius: 100px;
-}
-#speed{
+#s1{
     font-size:23px;
     margin:15px;
     filter:contrast(150%);
@@ -24,11 +20,11 @@
 .div_vol{
     float:right;
 }
-.div_vol_img{
+.div_img{
     width:200px;
     border-radius: 100px;
 }
-#vol{
+#s2{
     font-size:23px;
     margin:15px;
     filter:contrast(150%);
