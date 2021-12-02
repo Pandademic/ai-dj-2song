@@ -18,10 +18,12 @@ function setup(){
    video.hide();
    poseNet = ml5.poseNet(video, modelLoaded);
    poseNet.on('pose', gotPoses); 
-   circle(lwx,lwy,20);
 }
 function draw(){
     image(video,0,0,600,500);
+    fill("#FF0000");
+    stroke("#FF0000");
+    circle(lwx,lwy,20);
 }
 function modelLoaded() {
   console.log('PoseNet has come by taxi');
