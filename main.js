@@ -18,6 +18,7 @@ function setup(){
    video.hide();
    poseNet = ml5.poseNet(video, modelLoaded);
    poseNet.on('pose', gotPoses); 
+   circle(lwx,lwy,20);
 }
 function draw(){
     image(video,0,0,600,500);
@@ -29,7 +30,7 @@ function gotPoses(results){
     if(results.length>0){
         
 	rwx = results[0].pose.rightWrist.x;
-    rwy = results[0].pose.rightWrist.y;
+    	rwy = results[0].pose.rightWrist.y;
 	console.log("rightWristX = " + rwx +" rightWristY = "+ rwy);
 
 	lwx = results[0].pose.leftWrist.x;
