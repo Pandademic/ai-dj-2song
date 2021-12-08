@@ -50,7 +50,7 @@ function gotPoses(results){
     	stroke("#FF0000");
     	circle(lwx,lwy,20);
 	song2.stop();
-	if song1_status == false{
+	if (song1_status != true) {
 	   song1.play();
 	   document.getElementById("song-name").innerhtml == "Song 1"
 	}
