@@ -16,7 +16,7 @@ function preload(){
    song2=loadSound("music2.mp3")
 }
 function setup(){
-   canvas=createCanvas(600,500);
+   canvas=createCanvas(300,300);
    canvas.center();
    video=createCapture(VIDEO);
    video.hide();
@@ -50,16 +50,5 @@ function gotPoses(results){
 	//scores
 	lws =  results[0].pose.keypoints[10].score;
 	rws =  results[0].pose.keypoints[9].score;
-    }
-    if(scoreLeftWrist > 0.2){
-    	fill("#FF0000");
-    	stroke("#FF0000");
-    	circle(lwx,lwy,20);
-	song2.stop();
-	if (song1_status != true) {
-	   song1.play();
-	   document.getElementById("song-name").innerhtml == "Song 1"
-	}
-	 
-    }
+  }
 }
