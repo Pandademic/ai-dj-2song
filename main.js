@@ -9,15 +9,14 @@ lws = 0;
 rwx=0;
 rwy=0;
 rws=0;
-// is playing
 song1_status=0;
-song1_status=song1.isPlaying();
 song2_status=0;
-song2_status=song2.isPlaying();
-
 function preload(){
    song1=loadSound("music.mp3")
    song2=loadSound("music2.mp3")
+   // is playing
+   song1_status=song1.isPlaying();
+   song2_status=song2.isPlaying();
 }
 function setup(){
    canvas=createCanvas(600,500);
