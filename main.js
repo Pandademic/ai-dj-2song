@@ -12,26 +12,39 @@ rws=0;
 song1_status=0;
 song2_status=0;
 function preload(){
-   song1=loadSound("music.mp3")
-   song2=loadSound("music2.mp3")
+   song1=loadSound("music.mp3");
+   song2=loadSound("music2.mp3");
 }
 function setup(){
-   canvas=createCanvas(300,300);
+   canvas=createCanvas(600,600);
    canvas.center();
    video=createCapture(VIDEO);
    video.hide();
    poseNet = ml5.poseNet(video, modelLoaded);
    poseNet.on('pose', gotPoses); 
 }
+function checkAgain(){
+   if(lwy > 500){
+     song1.play();
+   }
+}
 function draw(){
    image(video,0,0,600,500); 
    song1_status=song1.isPlaying();
    song2_status=song2.isPlaying();
-   if(lws > 0.2){
+   if(lwy > 500){
+      song2.stop();
 	    fill("#FF0000");
 	    stroke("#FF0000");
+      song1.play();
 	    circle(lwx,lwy,20);
    }
+   else{
+     setTimeout(checkAgain,10000);
+     song1.stop();
+     song2.play();
+   }
+
 }
 function modelLoaded() {
   console.log('%cPoseNet has come by taxi',"background-color:black;color:white;font-size:45px;");
