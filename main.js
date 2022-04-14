@@ -23,11 +23,6 @@ function setup(){
    poseNet = ml5.poseNet(video, modelLoaded);
    poseNet.on('pose', gotPoses); 
 }
-function checkAgain(){
-   if(lwy > 500){
-     song1.play();
-   }
-}
 function draw(){
    image(video,0,0,600,500); 
    song1_status=song1.isPlaying();
@@ -38,11 +33,13 @@ function draw(){
 	    stroke("#FF0000");
       song1.play();
 	    circle(lwx,lwy,20);
-   }
-   else{
-     setTimeout(checkAgain,10000);
-     song1.stop();
-     song2.play();
+   }else if(rwy > 500){
+       song1.stop();
+	   fill("#0000FF")
+	   stroke("#0000FF")
+	song2.play();
+   }else{
+     setTimeout(console.log("waiting"),10000);
    }
 
 }
